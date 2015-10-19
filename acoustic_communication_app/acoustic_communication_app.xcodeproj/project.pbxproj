@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D9049001BD4B75A008BCE4D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */; };
+		8D90490C1BD4C073008BCE4D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490B1BD4C073008BCE4D /* TopViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8D90490F1BD4C14A008BCE4D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490E1BD4C14A008BCE4D /* RecordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8D9049111BD4C206008BCE4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9049101BD4C206008BCE4D /* AudioToolbox.framework */; };
+		8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049141BD4C474008BCE4D /* PlayViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8D9049181BD4C488008BCE4D /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C4D6DC171BCF74740098C3A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC161BCF74740098C3A3 /* main.m */; };
 		C4D6DC1A1BCF74740098C3A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC191BCF74740098C3A3 /* AppDelegate.m */; };
-		C4D6DC1D1BCF74740098C3A3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC1C1BCF74740098C3A3 /* ViewController.m */; };
 		C4D6DC201BCF74750098C3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D6DC1E1BCF74750098C3A3 /* Main.storyboard */; };
 		C4D6DC221BCF74750098C3A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D6DC211BCF74750098C3A3 /* Assets.xcassets */; };
 		C4D6DC251BCF74750098C3A3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D6DC231BCF74750098C3A3 /* LaunchScreen.storyboard */; };
@@ -35,12 +40,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		8D90490A1BD4C073008BCE4D /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopViewController.h; path = Controllers/TopViewController.h; sourceTree = "<group>"; };
+		8D90490B1BD4C073008BCE4D /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopViewController.m; path = Controllers/TopViewController.m; sourceTree = "<group>"; };
+		8D90490D1BD4C14A008BCE4D /* RecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecordViewController.h; path = Controllers/RecordViewController.h; sourceTree = "<group>"; };
+		8D90490E1BD4C14A008BCE4D /* RecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecordViewController.m; path = Controllers/RecordViewController.m; sourceTree = "<group>"; };
+		8D9049101BD4C206008BCE4D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8D9049131BD4C474008BCE4D /* PlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlayViewController.h; path = Controllers/PlayViewController.h; sourceTree = "<group>"; };
+		8D9049141BD4C474008BCE4D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayViewController.m; path = Controllers/PlayViewController.m; sourceTree = "<group>"; };
+		8D9049161BD4C488008BCE4D /* AnalyzeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalyzeViewController.h; path = Controllers/AnalyzeViewController.h; sourceTree = "<group>"; };
+		8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnalyzeViewController.m; path = Controllers/AnalyzeViewController.m; sourceTree = "<group>"; };
 		C4D6DC121BCF74740098C3A3 /* acoustic_communication_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acoustic_communication_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D6DC161BCF74740098C3A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D6DC181BCF74740098C3A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C4D6DC191BCF74740098C3A3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C4D6DC1B1BCF74740098C3A3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C4D6DC1C1BCF74740098C3A3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C4D6DC1F1BCF74750098C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4D6DC211BCF74750098C3A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D6DC241BCF74750098C3A3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +71,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9049111BD4C206008BCE4D /* AudioToolbox.framework in Frameworks */,
+				8D9049001BD4B75A008BCE4D /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,9 +93,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D9049011BD4BC17008BCE4D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8D90490A1BD4C073008BCE4D /* TopViewController.h */,
+				8D90490B1BD4C073008BCE4D /* TopViewController.m */,
+				8D90490D1BD4C14A008BCE4D /* RecordViewController.h */,
+				8D90490E1BD4C14A008BCE4D /* RecordViewController.m */,
+				8D9049131BD4C474008BCE4D /* PlayViewController.h */,
+				8D9049141BD4C474008BCE4D /* PlayViewController.m */,
+				8D9049161BD4C488008BCE4D /* AnalyzeViewController.h */,
+				8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		8D9049021BD4BCD6008BCE4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4D6DC1E1BCF74750098C3A3 /* Main.storyboard */,
+				C4D6DC231BCF74750098C3A3 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		8D9049031BD4BD3C008BCE4D /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Containers;
+			sourceTree = "<group>";
+		};
+		8D9049121BD4C21E008BCE4D /* FlameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				8D9049101BD4C206008BCE4D /* AudioToolbox.framework */,
+				8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */,
+			);
+			name = FlameWorks;
+			sourceTree = "<group>";
+		};
 		C4D6DC091BCF74740098C3A3 = {
 			isa = PBXGroup;
 			children = (
+				8D9049121BD4C21E008BCE4D /* FlameWorks */,
 				C4D6DC141BCF74740098C3A3 /* acoustic_communication_app */,
 				C4D6DC2E1BCF74750098C3A3 /* acoustic_communication_appTests */,
 				C4D6DC391BCF74750098C3A3 /* acoustic_communication_appUITests */,
@@ -101,14 +157,12 @@
 		C4D6DC141BCF74740098C3A3 /* acoustic_communication_app */ = {
 			isa = PBXGroup;
 			children = (
+				8D9049031BD4BD3C008BCE4D /* Containers */,
+				8D9049021BD4BCD6008BCE4D /* Views */,
+				8D9049011BD4BC17008BCE4D /* Controllers */,
 				C4D6DC181BCF74740098C3A3 /* AppDelegate.h */,
 				C4D6DC191BCF74740098C3A3 /* AppDelegate.m */,
-				C4D6DC1B1BCF74740098C3A3 /* ViewController.h */,
-				C4D6DC1C1BCF74740098C3A3 /* ViewController.m */,
-				C4D6DC1E1BCF74750098C3A3 /* Main.storyboard */,
 				C4D6DC211BCF74750098C3A3 /* Assets.xcassets */,
-				C4D6DC231BCF74750098C3A3 /* LaunchScreen.storyboard */,
-				C4D6DC261BCF74750098C3A3 /* Info.plist */,
 				C4D6DC151BCF74740098C3A3 /* Supporting Files */,
 			);
 			path = acoustic_communication_app;
@@ -117,6 +171,7 @@
 		C4D6DC151BCF74740098C3A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C4D6DC261BCF74750098C3A3 /* Info.plist */,
 				C4D6DC161BCF74740098C3A3 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -270,9 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4D6DC1D1BCF74740098C3A3 /* ViewController.m in Sources */,
+				8D90490C1BD4C073008BCE4D /* TopViewController.m in Sources */,
+				8D9049181BD4C488008BCE4D /* AnalyzeViewController.m in Sources */,
 				C4D6DC1A1BCF74740098C3A3 /* AppDelegate.m in Sources */,
 				C4D6DC171BCF74740098C3A3 /* main.m in Sources */,
+				8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */,
+				8D90490F1BD4C14A008BCE4D /* RecordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +556,7 @@
 				C4D6DC411BCF74750098C3A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4D6DC421BCF74750098C3A3 /* Build configuration list for PBXNativeTarget "acoustic_communication_appTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +565,7 @@
 				C4D6DC441BCF74750098C3A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C4D6DC451BCF74750098C3A3 /* Build configuration list for PBXNativeTarget "acoustic_communication_appUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +574,7 @@
 				C4D6DC471BCF74750098C3A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

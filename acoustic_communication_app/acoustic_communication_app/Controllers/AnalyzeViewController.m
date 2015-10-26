@@ -7,8 +7,12 @@
 //
 
 #import "AnalyzeViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+#import "MyFFT.h"
+
 
 @interface AnalyzeViewController ()
+- (IBAction)analyzeStart:(id)sender;
 
 @end
 
@@ -34,4 +38,71 @@
 }
 */
 
+- (void)process
+{
+    
+    NSString *dir = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *soundPath = [dir stringByAppendingPathComponent:@"test.caf"];// さっき録音したファイル
+    CFURLRef cfurl = (__bridge CFURLRef)[NSURL fileURLWithPath:soundPath];
+    
+    ExtAudioFileRef audioFile;
+    OSStatus status;
+    
+    status = ExtAudioFileOpenURL(cfurl, &audioFile);
+    
+    const UInt32 frameCount = 1024;
+    const int channelCountPerFrame = 1;
+    
+    AudioStreamBasicDescription clientFormat;
+    clientFormat.mChannelsPerFrame =  channelCountPerFrame;
+    clientFormat.mSampleRate = 44100;
+    
+    clientFormat.mFormatID = kAudioFormatLinearPCM;
+    clientFormat.mFormatFlags = kAudioFormatFlagIsFloat | kAudioFormatFlagIsNonInterleaved;
+    int cmpSize = sizeof(float);
+    int frameSize = cmpSize*channelCountPerFrame;
+    clientFormat.mBitsPerChannel = cmpSize*8;
+    clientFormat.mBytesPerPacket = frameSize;
+    clientFormat.mFramesPerPacket = 1;
+    clientFormat.mBytesPerFrame = frameSize;
+    
+    status = ExtAudioFileSetProperty(audioFile, kExtAudioFileProperty_ClientDataFormat, sizeof(clientFormat), &clientFormat);
+    
+    // 後述するMyFFTクラスを使用
+    MyFFT* fft = [[MyFFT alloc] initWithCapacity:frameCount];
+    
+    while(true) {
+        float buf[channelCountPerFrame*frameCount];
+        AudioBuffer ab = { channelCountPerFrame, sizeof(buf), buf };
+        AudioBufferList audioBufferList;
+        audioBufferList.mNumberBuffers = 1;
+        audioBufferList.mBuffers[0] = ab;
+        
+        UInt32 processedFrameCount = frameCount;
+        status = ExtAudioFileRead(audioFile, &processedFrameCount, &audioBufferList);
+        
+        if(processedFrameCount == 0){
+            break;
+        } else {
+            [fft process:buf];
+        }
+        
+        [fft process:buf];
+        int NumFrames = 64;
+        float vdist[NumFrames];
+        vDSP_vdist([fft realp], 1, [fft imagp], 1, vdist, 1, NumFrames);
+        
+        // vdist[0] 〜vdist[NumFrames-1]が周波数特性
+        for(int i = 1;i < NumFrames; i++){
+            NSLog(@"%d %f", i, vdist[i]);
+        }
+    }
+    
+    status = ExtAudioFileDispose(audioFile);
+   
+}
+
+- (IBAction)analyzeStart:(id)sender {
+    [self process];
+}
 @end

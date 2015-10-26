@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+@import AVFoundation;
 
 @interface AppDelegate ()
 
@@ -16,6 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    NSError *error = nil;
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    if(audioSession.isInputAvailable){
+        [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+        [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
+    }
+    [audioSession setActive:YES error:&error];
+    
     // Override point for customization after application launch.
     return YES;
 }

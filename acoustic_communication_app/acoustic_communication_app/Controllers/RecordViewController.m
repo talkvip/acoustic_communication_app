@@ -90,6 +90,7 @@
         NSLog(@"Error when preparing audio recorder :%@", [error localizedDescription]);
         return;
     }
+    [recorder prepareToRecord];
     [recorder record];
 }
 
@@ -131,12 +132,12 @@
     if ( self.recorder != nil && self.recorder.isRecording )
     {
         [self stopRecord];
-        [self.RecordButton setTitle:@"Record" forState:UIControlStateNormal];
+        [self.RecordButton setTitle:@"録音中" forState:UIControlStateNormal];
     }
     else
     {
         [self recordFile];
-        [self.RecordButton setTitle:@"..." forState:UIControlStateNormal];
+        [self.RecordButton setTitle:@"録音" forState:UIControlStateNormal];
     }
 }
 - (IBAction)playPushed:(id)sender {

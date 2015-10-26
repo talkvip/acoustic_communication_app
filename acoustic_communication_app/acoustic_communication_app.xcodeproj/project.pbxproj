@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D5B8E011BD746D800EA07DC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D5B8E001BD746D800EA07DC /* AVFoundation.framework */; };
+		8D5B8E041BD74CE200EA07DC /* MyFFT.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D5B8E031BD74CE200EA07DC /* MyFFT.m */; };
 		8D9049001BD4B75A008BCE4D /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */; };
-		8D90490C1BD4C073008BCE4D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490B1BD4C073008BCE4D /* TopViewController.m */; settings = {ASSET_TAGS = (); }; };
-		8D90490F1BD4C14A008BCE4D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490E1BD4C14A008BCE4D /* RecordViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8D90490C1BD4C073008BCE4D /* TopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490B1BD4C073008BCE4D /* TopViewController.m */; };
+		8D90490F1BD4C14A008BCE4D /* RecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D90490E1BD4C14A008BCE4D /* RecordViewController.m */; };
 		8D9049111BD4C206008BCE4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9049101BD4C206008BCE4D /* AudioToolbox.framework */; };
-		8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049141BD4C474008BCE4D /* PlayViewController.m */; settings = {ASSET_TAGS = (); }; };
-		8D9049181BD4C488008BCE4D /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */; settings = {ASSET_TAGS = (); }; };
+		8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049141BD4C474008BCE4D /* PlayViewController.m */; };
+		8D9049181BD4C488008BCE4D /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */; };
 		C4D6DC171BCF74740098C3A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC161BCF74740098C3A3 /* main.m */; };
 		C4D6DC1A1BCF74740098C3A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC191BCF74740098C3A3 /* AppDelegate.m */; };
 		C4D6DC201BCF74750098C3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D6DC1E1BCF74750098C3A3 /* Main.storyboard */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D5B8E001BD746D800EA07DC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		8D5B8E021BD74CE200EA07DC /* MyFFT.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyFFT.h; path = Containers/MyFFT.h; sourceTree = "<group>"; };
+		8D5B8E031BD74CE200EA07DC /* MyFFT.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFFT.m; path = Containers/MyFFT.m; sourceTree = "<group>"; };
 		8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		8D90490A1BD4C073008BCE4D /* TopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TopViewController.h; path = Controllers/TopViewController.h; sourceTree = "<group>"; };
 		8D90490B1BD4C073008BCE4D /* TopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TopViewController.m; path = Controllers/TopViewController.m; sourceTree = "<group>"; };
@@ -71,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5B8E011BD746D800EA07DC /* AVFoundation.framework in Frameworks */,
 				8D9049111BD4C206008BCE4D /* AudioToolbox.framework in Frameworks */,
 				8D9049001BD4B75A008BCE4D /* Accelerate.framework in Frameworks */,
 			);
@@ -120,6 +126,8 @@
 		8D9049031BD4BD3C008BCE4D /* Containers */ = {
 			isa = PBXGroup;
 			children = (
+				8D5B8E021BD74CE200EA07DC /* MyFFT.h */,
+				8D5B8E031BD74CE200EA07DC /* MyFFT.m */,
 			);
 			name = Containers;
 			sourceTree = "<group>";
@@ -127,6 +135,7 @@
 		8D9049121BD4C21E008BCE4D /* FlameWorks */ = {
 			isa = PBXGroup;
 			children = (
+				8D5B8E001BD746D800EA07DC /* AVFoundation.framework */,
 				8D9049101BD4C206008BCE4D /* AudioToolbox.framework */,
 				8D9048FF1BD4B75A008BCE4D /* Accelerate.framework */,
 			);
@@ -331,6 +340,7 @@
 				C4D6DC171BCF74740098C3A3 /* main.m in Sources */,
 				8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */,
 				8D90490F1BD4C14A008BCE4D /* RecordViewController.m in Sources */,
+				8D5B8E041BD74CE200EA07DC /* MyFFT.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,6 +483,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = acoustic_communication_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acoustic-communication-app.acoustic-communication-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -484,6 +498,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = acoustic_communication_app/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/libsndfile/1.0.25/lib,
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acoustic-communication-app.acoustic-communication-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

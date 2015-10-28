@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface PlayViewController : UIViewController
+@interface PlayViewController : UIViewController{
+    SystemSoundID sound;
+}
 
+- (void)setPlay:(long)frequency;
 @end

@@ -7,13 +7,15 @@
 //
 
 #import "PlayViewController.h"
-#import <AudioToolbox/AudioToolbox.h>
+#define __frequency 10000//21500
 
 @interface PlayViewController (){
     AudioUnit aU;
     UInt32 bitRate;
 }
+@property (weak, nonatomic) IBOutlet UILabel *freqLabel;
 @property (weak, nonatomic) IBOutlet UIButton *playButton;
+- (IBAction)playStopNow:(id)sender;
 
 @property (nonatomic) double phase;
 @property (nonatomic) Float64 sampleRate;
@@ -34,18 +36,21 @@ static OSStatus renderer(void *inRef,
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.playButton addTarget:self action:@selector(playStart) forControlEvents:UIControlEventTouchDown];
-    [self.playButton addTarget:self action:@selector(playStop) forControlEvents:UIControlEventTouchUpInside];
-    [self.playButton addTarget:self action:@selector(playStop) forControlEvents:UIControlEventTouchUpOutside];
+    //[self.playButton addTarget:self action:@selector(playStop) forControlEvents:UIControlEventTouchUpInside];
+    //[self.playButton addTarget:self action:@selector(playStop) forControlEvents:UIControlEventTouchUpOutside];
+    self.freqLabel.text = [NSString stringWithFormat:@"周波数は%d[Hz]", __frequency];
+    
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
+/*
 - (void)playStart{
-    NSLog(@"playStart");
-    
+
     //Sampling rate
     _sampleRate = 44100.0f;
     
@@ -53,7 +58,8 @@ static OSStatus renderer(void *inRef,
     bitRate = 8;  // 8bit
     
     //周波数（音程）
-    _frequency = 261.62;
+    //_frequency = 21700;
+    _frequency = __frequency;
     
     //AudioComponentDescription
     AudioComponentDescription aCD;
@@ -101,13 +107,15 @@ static OSStatus renderer(void *inRef,
     
     //再生
     AudioOutputUnitStart(aU);
+    
 }
 
 - (void)playStop{
-    NSLog(@"playStop");
-    AudioOutputUnitStop(aU);
+    //NSLog(@"playStop");
+    //AudioOutputUnitStop(aU);
 }
 
+ 
 static OSStatus renderer(void *inRef,
                          AudioUnitRenderActionFlags *ioActionFlags,
                          const AudioTimeStamp* inTimeStamp,
@@ -137,6 +145,28 @@ static OSStatus renderer(void *inRef,
     return noErr;
     
 };
+
+- (IBAction)playStopNow:(id)sender {
+    NSLog(@"playStop");
+    AudioOutputUnitStop(aU);
+}
+*/
+ 
+//周波数特性解析用のホワイトノイズ再生
+-(void)playStart{
+    //NSLog(@"playStart");
+    // サウンドの準備
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"whiteNoise" ofType:@"wav"];
+    NSURL *url = [NSURL fileURLWithPath:path];
+    AudioServicesCreateSystemSoundID((CFURLRef)CFBridgingRetain(url), &sound);
+    
+    // サウンドの再生
+    AudioServicesPlaySystemSound(sound);
+}
+-(IBAction)playStopNow:(id)sender{
+    //NSLog(@"playStop");
+    
+}
 
 /*
 #pragma mark - Navigation

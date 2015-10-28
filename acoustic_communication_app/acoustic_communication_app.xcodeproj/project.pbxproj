@@ -15,6 +15,7 @@
 		8D9049111BD4C206008BCE4D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D9049101BD4C206008BCE4D /* AudioToolbox.framework */; };
 		8D9049151BD4C474008BCE4D /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049141BD4C474008BCE4D /* PlayViewController.m */; };
 		8D9049181BD4C488008BCE4D /* AnalyzeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */; };
+		8DC2EFD91BE1788000341825 /* whiteNoise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8DC2EFD81BE1788000341825 /* whiteNoise.wav */; };
 		C4D6DC171BCF74740098C3A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC161BCF74740098C3A3 /* main.m */; };
 		C4D6DC1A1BCF74740098C3A3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C4D6DC191BCF74740098C3A3 /* AppDelegate.m */; };
 		C4D6DC201BCF74750098C3A3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D6DC1E1BCF74750098C3A3 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		8D9049141BD4C474008BCE4D /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlayViewController.m; path = Controllers/PlayViewController.m; sourceTree = "<group>"; };
 		8D9049161BD4C488008BCE4D /* AnalyzeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnalyzeViewController.h; path = Controllers/AnalyzeViewController.h; sourceTree = "<group>"; };
 		8D9049171BD4C488008BCE4D /* AnalyzeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnalyzeViewController.m; path = Controllers/AnalyzeViewController.m; sourceTree = "<group>"; };
+		8DC2EFD81BE1788000341825 /* whiteNoise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = whiteNoise.wav; path = ../../../../1029/whiteNoise.wav; sourceTree = "<group>"; };
 		C4D6DC121BCF74740098C3A3 /* acoustic_communication_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = acoustic_communication_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D6DC161BCF74740098C3A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C4D6DC181BCF74740098C3A3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 		C4D6DC151BCF74740098C3A3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8DC2EFD81BE1788000341825 /* whiteNoise.wav */,
 				C4D6DC261BCF74750098C3A3 /* Info.plist */,
 				C4D6DC161BCF74740098C3A3 /* main.m */,
 			);
@@ -308,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D6DC251BCF74750098C3A3 /* LaunchScreen.storyboard in Resources */,
+				8DC2EFD91BE1788000341825 /* whiteNoise.wav in Resources */,
 				C4D6DC221BCF74750098C3A3 /* Assets.xcassets in Resources */,
 				C4D6DC201BCF74750098C3A3 /* Main.storyboard in Resources */,
 			);
@@ -482,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = acoustic_communication_app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,6 +502,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = acoustic_communication_app/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
